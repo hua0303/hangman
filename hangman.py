@@ -1,4 +1,4 @@
-def calculator():
+def calculator(precision = 5):
     while True:
         try:
             first_number = float(input("Please provide a number: "))
@@ -30,8 +30,9 @@ def calculator():
         result = first_number * second_number
     else:
         result = "Invalid operator"
+        return
 
-    print("Your result is: ", result)
+    print("Your result is: ", round(result, precision))
     print()
 
 
