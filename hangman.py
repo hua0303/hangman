@@ -1,4 +1,6 @@
-def calculator(precision = 5):
+def calculator(precision):
+    operations =["+", "-", "/", "*"]
+    
     while True:
         try:
             first_number = float(input("Please provide a number: "))
@@ -8,7 +10,7 @@ def calculator(precision = 5):
 
     while True:
         function = input("Please choose an operator (+, -, /, *): ")
-        if function in ["+", "-", "/", "*"]:
+        if function in operations:
             break
         else:
             print("Invalid input. Please try again.")
@@ -38,7 +40,7 @@ def calculator(precision = 5):
 
 if __name__ == "__main__":
     while True:
-        calculator()
+        calculator(precision=5)
 
         if input("Do you want to go again? ").lower() not in ["y", "yes"]:
             break
@@ -46,3 +48,4 @@ if __name__ == "__main__":
         print()
 
     print("Thanks for using my Python Calculator :)")
+
